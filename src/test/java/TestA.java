@@ -23,7 +23,7 @@ public class TestA extends BaseClass {
         page = new Page(driver);
     }
 
-    @Test
+    @Test(priority = 1)
     public void test2() {
         driver.findElement(course).isEnabled();
 
@@ -44,7 +44,7 @@ public class TestA extends BaseClass {
 
 
 
-        @Test
+        @Test(dependsOnMethods = "iWriteCertificate")
 
         public void checkCertificateValidation (String expected) throws Exception {
             Assert.assertEquals(Boolean.valueOf(expected), page.validationCertificare());
