@@ -1,5 +1,5 @@
-package conf;
+package config;
 
-public enum Webdrivers {
-    CHROME_INCOGNITO, CHROME,BONYGARSIA;
+public enum WebDrivers {
+    CHROME_INCOGNITO,CHROME,FIREFOX,PROXYCHROME,BONYGARSIA;
 }

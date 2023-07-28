@@ -8,7 +8,7 @@ public class BaseClass {
     public static WebDriver driver;
     @BeforeClass
     public void creat(){
-        driver=ConfiguretionWebDriver.createDriver(WebDrivers.BONYGARSIA);
+        driver= config.ConfiguretionWebDriver.createDriver(config.WebDrivers.BONYGARSIA);
     }
     @AfterClass
     public void af() throws InterruptedException {
