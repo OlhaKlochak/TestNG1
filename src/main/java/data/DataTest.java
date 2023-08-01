@@ -6,7 +6,7 @@ public class DataTest {
     @DataProvider
     public static Object[][] getCert(){
         return new Object[][]{
-                {"45924126"},
+                {"45924126","true"},
 
         };
     }

@@ -14,9 +14,10 @@ public class Page {
 
    public Page(WebDriver driver) {
       this.driver = driver;
+      PageFactory.initElements(driver,this);
    }
 
-   WebDriver driver;
+   static WebDriver driver;
 
    @FindBy(name = "certificate")
    WebElement searchField;
