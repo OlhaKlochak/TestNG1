@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Olha Klochak">
+    <!--    <listeners>-->
+    <!--        <listener class-name="lesson0402.MyLisenerForFormConsultation"/>-->
+    <!--    </listeners>-->
+    <test verbose="2" preserve-order="true" name="HillelMainPageTEst">
+
+        <classes>
+
+            <class name="TestA"/>
+        </classes>
+    </test>
+</suite>
