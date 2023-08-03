@@ -1,8 +1,9 @@
 import Page.Page;
 import config.BaseClass;
 import data.DataTest;
-import org.junit.Assert;
+
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
