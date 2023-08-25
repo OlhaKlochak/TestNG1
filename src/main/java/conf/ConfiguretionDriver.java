@@ -1,6 +1,6 @@
-package config;
+package conf;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import net.lightbody.bmp.BrowserMobProxyServer;
 import net.lightbody.bmp.client.ClientUtil;
 import org.openqa.selenium.Proxy;
@@ -14,35 +14,40 @@ import java.net.Inet4Address;
 import java.net.UnknownHostException;
 import java.util.concurrent.TimeUnit;
 
-public class ConfiguretionWebDriver {
+public class ConfiguretionDriver {
     static WebDriver driver = null;
     static BrowserMobProxyServer server=null;
-    static public WebDriver createDriver(config.WebDrivers webDrivers) {
+    static public WebDriver createDriver(conf.WebDrivers webDrivers) {
 
         switch (webDrivers) {
-            case CHROME -> createChrome();
-            case CHROME_INCOGNITO -> createChromeIncognito();
-            case FIREFOX -> createFireFox();
-            case PROXYCHROME -> createProxyChrome();
-            case BONYGARSIA -> createDriverBony();
+            case CHROME : createChrome();
+            break;
+            case CHROME_INCOGNITO : createChromeIncognito();
+            break;
+            case FIREFOX : createFireFox();
+            break;
+            case PROXYCHROME : createProxyChrome();
+            break;
+        //    case BONYGARSIA : createDriverBony();
+        //    break;
         }
         return driver;
     }
 
-    private static void createDriverBony() {
-        ChromeOptions options = new ChromeOptions();
-
-        options.addArguments("--remote-allow-origins=*");
-        options.addArguments("--start-maximized");
-        options.addArguments("--incognito");
+//    private static void createDriverBony() {
+//        ChromeOptions options = new ChromeOptions();
+//
+//        options.addArguments("--remote-allow-origins=*");
+//        options.addArguments("--start-maximized");
+//        options.addArguments("--incognito");
 //...
 
 //chromeOptions.addArguments(<another-option>);
 
 //...
 
-        driver = WebDriverManager.chromedriver().capabilities(options).create();
-    }
+//        driver = WebDriverManager.chromedriver().capabilities(options).create();
+  //  }
 
     private static void createProxyChrome() {
 ////

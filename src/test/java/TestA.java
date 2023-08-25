@@ -1,6 +1,6 @@
 import Page.Page;
-import config.BaseClass;
-import data.DataTest;
+import conf.BaseClass;
+import datat.DataTest;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
